@@ -2,25 +2,15 @@
 
 This is a small, unofficial macOS CUPS driver for the PM220 label printer.
 
-The driver installs a CUPS queue named `PM220`, uses a custom raster filter, and sends TSPL commands directly to the printer.
+The driver installs a CUPS queue named `PM220`, uses a custom raster filter and sends TSPL commands directly to the printer.
 
 ## Current Capabilities
 
 - Label size is configurable through the PPD media size.
-- The PPD includes common label sizes from `30 x 20 mm` through `50 x 150 mm`.
+- The PPD includes common label sizes between `30 x 20 mm` and `50 x 150 mm`.
 - Custom media widths are limited to the PM220-supported `23-54 mm` range.
-- Gap is configurable from `0 mm` through `10 mm`.
+- Gap is configurable from `0 mm` to `10 mm`.
 - Print density, speed, and direction are configurable.
-- Resolution is fixed at `203 DPI`.
-- Output is monochrome, 1-bit raster data.
-- The CUPS queue is created as `PM220`.
-
-## Files
-
-- `src/pm220-filter.c` - CUPS raster filter that converts CUPS raster pages into TSPL bitmap print commands.
-- `ppd/PM220.ppd` - PPD file that defines the PM220 queue, 203 DPI output, and the fixed 50 x 30 mm media size.
-- `scripts/install.sh` - builds and installs the filter, installs the PPD, detects the USB printer URI, and creates the CUPS queue.
-- `scripts/uninstall.sh` - removes the queue, installed filter, installed PPD, and temporary build output.
 
 ## Requirements
 
@@ -29,11 +19,12 @@ The driver installs a CUPS queue named `PM220`, uses a custom raster filter, and
 - The printer connected over USB and powered on.
 - Administrator access for installing the CUPS filter and PPD.
 
-## Install
+## Installation
 
 From the project directory:
 
 ```sh
+chmod +x scripts/install.sh
 ./scripts/install.sh
 ```
 
@@ -113,6 +104,7 @@ lpstat -v PM220
 ## Uninstall
 
 ```sh
+chmod +x scripts/uninstall.sh
 ./scripts/uninstall.sh
 ```
 
