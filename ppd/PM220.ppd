@@ -1,0 +1,64 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "3.1"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "PM220RAS.PPD"
+
+*Manufacturer: "Polono"
+*Product: "(2B-PM220)"
+*ModelName: "PM220"
+*ShortNickName: "PM220"
+*NickName: "PM220"
+
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+
+*cupsVersion: 2.0
+*cupsManualCopies: True
+*cupsModelNumber: 1
+*cupsFilter: "application/vnd.cups-raster 0 pm220-filter"
+
+*cupsColorSpace: 3
+*cupsColorOrder: 0
+*cupsBitsPerColor: 1
+*cupsBitsPerPixel: 1
+
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: 30x50mmRotated.Fullbleed
+*PageSize 30x50mmRotated.Fullbleed/50 x 30 mm: "<</PageSize[141.73 85.04] /ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: 30x50mmRotated.Fullbleed
+*PageRegion 30x50mmRotated.Fullbleed/50 x 30 mm: "<</PageSize[141.73 85.04] /ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: 30x50mmRotated.Fullbleed
+*ImageableArea 30x50mmRotated.Fullbleed/50 x 30 mm: "0 0 141.73 85.04"
+
+*DefaultPaperDimension: 30x50mmRotated.Fullbleed
+*PaperDimension 30x50mmRotated.Fullbleed/50 x 30 mm: "141.73 85.04"
+
+*HWMargins: 0 0 0 0
+
+*DefaultResolution: 203dpi
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*Resolution 203dpi/203 DPI: "<</HWResolution[203 203]>>setpagedevice"
+*CloseUI: *Resolution
+
+*DefaultFont: Courier
+*Font Courier: Standard "(001.004)" Standard ROM
+*Font Helvetica: Standard "(001.006)" Standard ROM
+*Font Times-Roman: Standard "(001.007)" Standard ROM
+
+*% End
