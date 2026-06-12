@@ -33,22 +33,115 @@
 *OpenUI *PageSize/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
 *DefaultPageSize: 30x50mmRotated.Fullbleed
+*PageSize 20x30mmRotated.Fullbleed/30 x 20 mm: "<</PageSize[85.04 56.69] /ImagingBBox null>>setpagedevice"
+*PageSize 25x25mm.Fullbleed/25 x 25 mm: "<</PageSize[70.87 70.87] /ImagingBBox null>>setpagedevice"
+*PageSize 30x40mmRotated.Fullbleed/40 x 30 mm: "<</PageSize[113.39 85.04] /ImagingBBox null>>setpagedevice"
 *PageSize 30x50mmRotated.Fullbleed/50 x 30 mm: "<</PageSize[141.73 85.04] /ImagingBBox null>>setpagedevice"
+*PageSize 40x50mmRotated.Fullbleed/50 x 40 mm: "<</PageSize[141.73 113.39] /ImagingBBox null>>setpagedevice"
+*PageSize 50x50mm.Fullbleed/50 x 50 mm: "<</PageSize[141.73 141.73] /ImagingBBox null>>setpagedevice"
+*PageSize 50x70mm.Fullbleed/50 x 70 mm: "<</PageSize[141.73 198.43] /ImagingBBox null>>setpagedevice"
+*PageSize 50x100mm.Fullbleed/50 x 100 mm: "<</PageSize[141.73 283.46] /ImagingBBox null>>setpagedevice"
+*PageSize 50x150mm.Fullbleed/50 x 150 mm: "<</PageSize[141.73 425.20] /ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 
 *OpenUI *PageRegion/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
 *DefaultPageRegion: 30x50mmRotated.Fullbleed
+*PageRegion 20x30mmRotated.Fullbleed/30 x 20 mm: "<</PageSize[85.04 56.69] /ImagingBBox null>>setpagedevice"
+*PageRegion 25x25mm.Fullbleed/25 x 25 mm: "<</PageSize[70.87 70.87] /ImagingBBox null>>setpagedevice"
+*PageRegion 30x40mmRotated.Fullbleed/40 x 30 mm: "<</PageSize[113.39 85.04] /ImagingBBox null>>setpagedevice"
 *PageRegion 30x50mmRotated.Fullbleed/50 x 30 mm: "<</PageSize[141.73 85.04] /ImagingBBox null>>setpagedevice"
+*PageRegion 40x50mmRotated.Fullbleed/50 x 40 mm: "<</PageSize[141.73 113.39] /ImagingBBox null>>setpagedevice"
+*PageRegion 50x50mm.Fullbleed/50 x 50 mm: "<</PageSize[141.73 141.73] /ImagingBBox null>>setpagedevice"
+*PageRegion 50x70mm.Fullbleed/50 x 70 mm: "<</PageSize[141.73 198.43] /ImagingBBox null>>setpagedevice"
+*PageRegion 50x100mm.Fullbleed/50 x 100 mm: "<</PageSize[141.73 283.46] /ImagingBBox null>>setpagedevice"
+*PageRegion 50x150mm.Fullbleed/50 x 150 mm: "<</PageSize[141.73 425.20] /ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
 
+*VariablePaperSize: True
+*MaxMediaWidth: "153.07"
+*MaxMediaHeight: "425.20"
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll] /ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 65.20 153.07
+*ParamCustomPageSize Height: 2 points 56.69 425.20
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
 *DefaultImageableArea: 30x50mmRotated.Fullbleed
+*ImageableArea 20x30mmRotated.Fullbleed/30 x 20 mm: "0 0 85.04 56.69"
+*ImageableArea 25x25mm.Fullbleed/25 x 25 mm: "0 0 70.87 70.87"
+*ImageableArea 30x40mmRotated.Fullbleed/40 x 30 mm: "0 0 113.39 85.04"
 *ImageableArea 30x50mmRotated.Fullbleed/50 x 30 mm: "0 0 141.73 85.04"
+*ImageableArea 40x50mmRotated.Fullbleed/50 x 40 mm: "0 0 141.73 113.39"
+*ImageableArea 50x50mm.Fullbleed/50 x 50 mm: "0 0 141.73 141.73"
+*ImageableArea 50x70mm.Fullbleed/50 x 70 mm: "0 0 141.73 198.43"
+*ImageableArea 50x100mm.Fullbleed/50 x 100 mm: "0 0 141.73 283.46"
+*ImageableArea 50x150mm.Fullbleed/50 x 150 mm: "0 0 141.73 425.20"
 
 *DefaultPaperDimension: 30x50mmRotated.Fullbleed
+*PaperDimension 20x30mmRotated.Fullbleed/30 x 20 mm: "85.04 56.69"
+*PaperDimension 25x25mm.Fullbleed/25 x 25 mm: "70.87 70.87"
+*PaperDimension 30x40mmRotated.Fullbleed/40 x 30 mm: "113.39 85.04"
 *PaperDimension 30x50mmRotated.Fullbleed/50 x 30 mm: "141.73 85.04"
+*PaperDimension 40x50mmRotated.Fullbleed/50 x 40 mm: "141.73 113.39"
+*PaperDimension 50x50mm.Fullbleed/50 x 50 mm: "141.73 141.73"
+*PaperDimension 50x70mm.Fullbleed/50 x 70 mm: "141.73 198.43"
+*PaperDimension 50x100mm.Fullbleed/50 x 100 mm: "141.73 283.46"
+*PaperDimension 50x150mm.Fullbleed/50 x 150 mm: "141.73 425.20"
 
 *HWMargins: 0 0 0 0
+
+*OpenUI *PM220Gap/Label Gap: PickOne
+*OrderDependency: 20 AnySetup *PM220Gap
+*DefaultPM220Gap: 5mm
+*PM220Gap 0mm/0 mm: ""
+*PM220Gap 2mm/2 mm: ""
+*PM220Gap 3mm/3 mm: ""
+*PM220Gap 4mm/4 mm: ""
+*PM220Gap 5mm/5 mm: ""
+*PM220Gap 6mm/6 mm: ""
+*PM220Gap 8mm/8 mm: ""
+*PM220Gap 10mm/10 mm: ""
+*CloseUI: *PM220Gap
+
+*OpenUI *PM220Density/Print Density: PickOne
+*OrderDependency: 20 AnySetup *PM220Density
+*DefaultPM220Density: 8
+*PM220Density 1/1: ""
+*PM220Density 2/2: ""
+*PM220Density 3/3: ""
+*PM220Density 4/4: ""
+*PM220Density 5/5: ""
+*PM220Density 6/6: ""
+*PM220Density 7/7: ""
+*PM220Density 8/8: ""
+*PM220Density 9/9: ""
+*PM220Density 10/10: ""
+*PM220Density 11/11: ""
+*PM220Density 12/12: ""
+*PM220Density 13/13: ""
+*PM220Density 14/14: ""
+*PM220Density 15/15: ""
+*CloseUI: *PM220Density
+
+*OpenUI *PM220Speed/Print Speed: PickOne
+*OrderDependency: 20 AnySetup *PM220Speed
+*DefaultPM220Speed: 4
+*PM220Speed 1/1 ips: ""
+*PM220Speed 2/2 ips: ""
+*PM220Speed 3/3 ips: ""
+*PM220Speed 4/4 ips: ""
+*PM220Speed 5/5 ips: ""
+*PM220Speed 6/6 ips: ""
+*CloseUI: *PM220Speed
+
+*OpenUI *PM220Direction/Print Direction: PickOne
+*OrderDependency: 20 AnySetup *PM220Direction
+*DefaultPM220Direction: 0
+*PM220Direction 0/Normal: ""
+*PM220Direction 1/Reverse: ""
+*CloseUI: *PM220Direction
 
 *DefaultResolution: 203dpi
 *OpenUI *Resolution/Resolution: PickOne

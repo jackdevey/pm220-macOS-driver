@@ -17,6 +17,14 @@ echo "PM220 macOS CUPS Driver Installation Script"
 echo "-------------------------------------------"
 echo ""
 
+if [[ "$EUID" -ne 0 ]]; then
+    echo "Error: this installer must be run with sudo"
+    echo ""
+    echo "Run:"
+    echo "  sudo ./scripts/install.sh"
+    exit 1
+fi
+
 if [[ ! -f "$FILTER_SRC" ]]; then
     echo "Error: $FILTER_SRC not found"
     exit 1

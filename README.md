@@ -4,18 +4,16 @@ This is a small, unofficial macOS CUPS driver for the PM220 label printer.
 
 The driver installs a CUPS queue named `PM220`, uses a custom raster filter, and sends TSPL commands directly to the printer.
 
-## Current Limitations
+## Current Capabilities
 
-This driver is intentionally narrow right now:
-
-- Label size is fixed at `50 x 30 mm`.
-- Gap is fixed at `5 mm`.
+- Label size is configurable through the PPD media size.
+- The PPD includes common label sizes from `30 x 20 mm` through `50 x 150 mm`.
+- Custom media widths are limited to the PM220-supported `23-54 mm` range.
+- Gap is configurable from `0 mm` through `10 mm`.
+- Print density, speed, and direction are configurable.
 - Resolution is fixed at `203 DPI`.
 - Output is monochrome, 1-bit raster data.
 - The CUPS queue is created as `PM220`.
-- Media/layout options are not currently configurable from the print dialog.
-
-> I may update this in the future to support configurable label sizes, gap sizes, and other printer settings. For now, the constants live in `src/pm220-filter.c` and the matching media definition lives in `ppd/PM220.ppd`.
 
 ## Files
 
@@ -67,9 +65,44 @@ Print a label with:
 lp -p PM220 -o media=30x50mmRotated.Fullbleed /path/to/label.pdf
 ```
 
-The input should be prepared for a 50 x 30 mm label. The PPD exposes this as `30x50mmRotated.Fullbleed` because of how the page dimensions are represented for CUPS.
+The input should be prepared for the selected label size. The original `50 x 30 mm` media remains available as `30x50mmRotated.Fullbleed` for compatibility.
 
-> Or of course, a label can be printed with the macOS print dialog throughout the system.
+Other built-in media names include:
+
+- `20x30mmRotated.Fullbleed` - `30 x 20 mm`
+- `25x25mm.Fullbleed` - `25 x 25 mm`
+- `30x40mmRotated.Fullbleed` - `40 x 30 mm`
+- `40x50mmRotated.Fullbleed` - `50 x 40 mm`
+- `50x50mm.Fullbleed` - `50 x 50 mm`
+- `50x70mm.Fullbleed` - `50 x 70 mm`
+- `50x100mm.Fullbleed` - `50 x 100 mm`
+- `50x150mm.Fullbleed` - `50 x 150 mm`
+
+You can also set printer options from the command line:
+
+```sh
+lp -p PM220 \
+  -o media=40x50mmRotated.Fullbleed \
+  -o PM220Gap=3mm \
+  -o PM220Density=10 \
+  -o PM220Speed=3 \
+  -o PM220Direction=0 \
+  /path/to/label.pdf
+```
+
+The same options are exposed in the macOS print dialog by the PPD.
+
+For custom media, use CUPS custom media syntax. The width must be between `23 mm` and `54 mm`; the current PPD allows lengths from `20 mm` to `150 mm`.
+
+```sh
+lp -p PM220 -o media=Custom.40x60mm /path/to/label.pdf
+```
+
+For a full-width label:
+
+```sh
+lp -p PM220 -o media=Custom.54x80mm /path/to/label.pdf
+```
 
 ## Check The Queue
 
